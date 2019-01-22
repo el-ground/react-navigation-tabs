@@ -112,7 +112,7 @@ class TabNavigationView extends React.PureComponent<Props, State> {
             return (
               <ResourceSavingScene
                 key={route.key}
-                style={StyleSheet.absoluteFill}
+                style={[StyleSheet.absoluteFill, { overflow: 'visible' }]}
                 isVisible={isFocused}
               >
                 {renderScene({ route })}
@@ -135,6 +135,7 @@ const styles = StyleSheet.create({
   },
   pages: {
     flex: 1,
+    overflow: 'visible',
   },
 });
 
